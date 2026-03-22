@@ -99,21 +99,5 @@ novatech-reboot/
 - Google Fonts (Orbitron, Poppins, Fira Code)
 - OpenStreetMap (API de mapas)
 
-## 📊 Criterios de Aceptación
-
-| Criterio | Estado |
-|----------|--------|
-| 3 páginas funcionales | ✅ |
-| Diseño responsive | ✅ |
-| Animaciones y efectos visuales | ✅ |
-| Pantalla inicial interactiva (503) | ✅ |
-| Chatbot funcional (NOVA) | ✅ |
-| Easter egg implementado | ✅ |
-| Narrativa clara | ✅ |
-| Identidad visual consistente | ✅ |
-| Código organizado | ✅ |
-| Repositorio en GitHub | ✅ |
-
----
 
 **Hecho con ⚡ en Santo Domingo, República Dominicana**
