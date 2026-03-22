@@ -35,7 +35,7 @@ Una empresa dominicana fue eliminada del entorno digital de la noche a la mañan
 - ✅ **Contadores animados** — estadísticas con animación
 - ✅ **Validación de formulario** — campos requeridos + email
 
-### Extras (+2 puntos)
+### Extras
 - ✅ **Mapa integrado** — OpenStreetMap (iframe) con ubicación en Santo Domingo
 - ✅ **Modo oscuro/claro** — Toggle con persistencia en localStorage
 
