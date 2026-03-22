@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NovaTech — Fuimos borrados. Nos reinventamos. Volvimos mejores.">
+  <title>NovaTech — Reboot Protocol</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+  <!-- ===== 503 ERROR OVERLAY ===== -->
+  <div id="error-overlay">
+    <div class="error-overlay__scanlines"></div>
+    <div class="error-overlay__icon"><i data-lucide="alert-triangle"></i></div>
+    <div class="error-overlay__code">ERROR 503</div>
+    <p class="error-overlay__msg">DIGITAL PRESENCE NOT FOUND</p>
+    <button class="error-overlay__btn" id="recover-btn">
+      <i data-lucide="refresh-cw"></i> RECOVER SYSTEM
+    </button>
+    <p class="error-overlay__hint">Sistema NovaTech v2.0 — Protocolo de recuperación disponible</p>
+  </div>
+
+  <!-- ===== SCANLINES + PARTICLES ===== -->
+  <div class="scanlines"></div>
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo__name">NOVATECH</span>
+        <span class="nav-logo__tagline">REBOOT PROTOCOL</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema"><i data-lucide="sun"></i></button>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        SISTEMA RESTAURADO — v2.0.26
+      </div>
+      <h1>
+        Fuimos borrados.<br>
+        <span class="highlight glitch" data-text="Volvimos mejores.">Volvimos mejores.</span>
+      </h1>
+      <p class="hero-sub">
+        Una mañana, NovaTech desapareció del internet. Hoy resurgimos con
+        tecnología blindada, identidad renovada y la creatividad que solo
+        sobrevivir al caos puede dar.
+      </p>
+      <div class="hero-buttons">
+        <a href="#historia" class="btn btn-primary"><i data-lucide="scroll-text"></i> Descubre la historia</a>
+        <a href="servicios.html" class="btn btn-outline"><i data-lucide="rocket"></i> Ver servicios</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== USB MESSAGE ===== -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="section-inner fade-in">
+      <div class="usb-message">
+        <p>
+          &gt; ARCHIVO ENCONTRADO EN USB DESCONOCIDO — 15/01/2026 07:32:04 AM<br>
+          &gt; UBICACIÓN: Oficina principal, escritorio del CEO<br>
+          &gt; CONTENIDO:<br><br>
+          "Tu negocio ha sido borrado de la existencia digital.<br>
+          Si quieres recuperarlo, deberás reinventarlo.<br>
+          Usa la tecnología, la creatividad y tu ingenio<br>
+          para traerlo de vuelta."<br><br>
+          &gt; ESTADO: DESAFÍO ACEPTADO ✓<br>
+          &gt; PROTOCOLO REBOOT: ACTIVADO [ON]
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TIMELINE — HISTORIA DEL MISTERIO ===== -->
+  <section class="section" id="historia">
+    <div class="section-inner">
+      <div class="fade-in">
+        <span class="section-label">// la historia</span>
+        <h2 class="section-title">El Misterio del Borrado Digital</h2>
+        <p class="section-desc">
+          Lo que comenzó como una pesadilla se convirtió en nuestra mayor transformación.
+          Esta es la cronología de cómo resurgimos.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item fade-in">
+          <span class="timeline-date">15 enero 2026 — 03:42 AM</span>
+          <h3><i data-lucide="alert-triangle"></i> El Apagón Digital</h3>
+          <p>
+            El sistema de monitoreo detectó actividad anómala. En cuestión de minutos,
+            la página web arrojaba error 503, las redes sociales mostraban "cuenta no encontrada"
+            y los registros DNS fueron purgados. NovaTech dejó de existir en internet.
+          </p>
+        </article>
+
+        <article class="timeline-item fade-in">
+          <span class="timeline-date">15 enero 2026 — 07:30 AM</span>
+          <h3><i data-lucide="usb"></i> El USB Misterioso</h3>
+          <p>
+            El CEO encontró un USB sin marcas sobre su escritorio. Un solo archivo de texto
+            contenía un mensaje enigmático: un desafío para reinventar el negocio
+            o desaparecer permanentemente del mundo digital.
+          </p>
+        </article>
+
+        <article class="timeline-item fade-in">
+          <span class="timeline-date">16 enero — 22 enero 2026</span>
+          <h3><i data-lucide="search"></i> Investigación Forense</h3>
+          <p>
+            El equipo de ciberseguridad rastreó el ataque. Credenciales del panel de control
+            fueron comprometidas. Los datos de clientes se salvaron gracias a un backup offline
+            que el atacante no detectó. Se documentó toda la evidencia.
+          </p>
+        </article>
+
+        <article class="timeline-item fade-in">
+          <span class="timeline-date">23 enero — 20 febrero 2026</span>
+          <h3><i data-lucide="hammer"></i> Reconstrucción Total</h3>
+          <p>
+            El equipo decidió no restaurar lo anterior, sino reinventarse por completo:
+            nueva marca, infraestructura blindada, servicios mejorados con seguridad integrada,
+            y una narrativa que convierte la vulnerabilidad en fortaleza.
+          </p>
+        </article>
+
+        <article class="timeline-item fade-in">
+          <span class="timeline-date">1 marzo 2026</span>
+          <h3><i data-lucide="zap"></i> El Resurgimiento</h3>
+          <p>
+            NovaTech volvió al ecosistema digital más fuerte, más seguro y con una identidad
+            que refleja resiliencia. Protocolos de seguridad de última generación,
+            monitoreo 24/7 y una promesa: nunca más.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="section-inner">
+      <div class="stats-row fade-in">
+        <div class="stat-item">
+          <div class="stat-number" data-target="45" data-suffix=" días">0</div>
+          <div class="stat-label">Para resurgir</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="100" data-suffix="%">0</div>
+          <div class="stat-label">Datos recuperados</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="256" data-suffix="-bit">0</div>
+          <div class="stat-label">Encriptación nueva</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="24" data-suffix="/7">0</div>
+          <div class="stat-label">Monitoreo activo</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA — RENACIMIENTO ===== -->
+  <section class="section" id="renacimiento">
+    <div class="section-inner fade-in" style="text-align: center; max-width: 700px; margin: 0 auto;">
+      <span class="section-label">// renacimiento</span>
+      <h2 class="section-title">Nos reinventamos para ser indestructibles</h2>
+      <p class="section-desc" style="margin-left: auto; margin-right: auto;">
+        Lo que no nos destruyó nos transformó. Ahora ofrecemos soluciones digitales
+        con la seguridad y creatividad que solo la experiencia real puede dar.
+        <strong>Fuimos borrados. Nos reinventamos. Volvimos mejores.</strong>
+      </p>
+      <div class="hero-buttons" style="margin-top: 2rem;">
+        <a href="servicios.html" class="btn btn-primary">Ver servicios reinventados</a>
+        <a href="contacto.html" class="btn btn-outline">Contactar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">NOVATECH</div>
+        <p>Fuimos borrados. Nos reinventamos. Volvimos mejores.<br>Agencia digital dominicana, reconstruida.</p>
+      </div>
+      <div>
+        <h4>NAVEGACIÓN</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>CONTACTO</h4>
+        <ul>
+          <li><a href="mailto:info@novatech.do">info@novatech.do</a></li>
+          <li><a href="tel:+18095556682">+1 (809) 555-NOVA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>REDES</h4>
+        <ul>
+          <li><a href="#"><i data-lucide="instagram"></i> Instagram</a></li>
+          <li><a href="#"><i data-lucide="linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://github.com/FelixDls10/Reto-Pyme" target="_blank" rel="noopener"><i data-lucide="github"></i> GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 NovaTech. Todos los derechos reservados.</span>
+      <span>Hecho con <i data-lucide="zap"></i> en Santo Domingo</span>
+    </div>
+  </footer>
+
+  <!-- ===== CHATBOT — NOVA Assistant ===== -->
+  <button class="chatbot-trigger" id="chatbot-trigger" aria-label="Abrir NOVA Assistant"><i data-lucide="message-circle"></i></button>
+  <div class="chatbot-window" id="chatbot-window">
+    <div class="chatbot-header">
+      <div>
+        <h4>NOVA Assistant</h4>
+        <div class="status">En línea</div>
+      </div>
+      <button class="chatbot-close" id="chatbot-close" aria-label="Cerrar">&times;</button>
+    </div>
+    <div class="chatbot-messages" id="chatbot-messages"></div>
+    <div class="chatbot-input-area">
+      <input type="text" id="chatbot-input" placeholder="Escribe tu pregunta..." autocomplete="off">
+      <button id="chatbot-send" aria-label="Enviar"><i data-lucide="send"></i></button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

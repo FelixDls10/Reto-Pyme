@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacta a NovaTech — Evidencias del incidente digital y formulario de contacto.">
+  <title>Contacto — NovaTech</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+  <div class="scanlines"></div>
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo__name">NOVATECH</span>
+        <span class="nav-logo__tagline">REBOOT PROTOCOL</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema"><i data-lucide="sun"></i></button>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <header class="page-header">
+    <span class="section-label">// contacto &amp; evidencias</span>
+    <h1>
+      Pruebas del <span class="glitch" data-text="incidente.">incidente.</span>
+    </h1>
+    <p>
+      Documentamos las evidencias del borrado digital con total transparencia.
+      Contáctanos para llevar tu proyecto al siguiente nivel.
+    </p>
+  </header>
+
+  <!-- ===== EVIDENCE SECTION ===== -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="section-inner">
+      <div class="fade-in">
+        <span class="section-label">// expediente del caso</span>
+        <h2 class="section-title">Evidencias del Borrado Digital</h2>
+        <p class="section-desc">
+          Registros forenses que documentan lo ocurrido.
+          Transparencia total como parte de nuestro compromiso.
+        </p>
+      </div>
+
+      <div class="evidence-grid">
+        <article class="evidence-card fade-in">
+          <h3><i data-lucide="clipboard-list"></i> Log del Servidor</h3>
+          <p>Últimos registros antes de la eliminación total del sistema.</p>
+          <div class="code-block">[2026-01-15 03:42:17] WARN: Unauthorized access detected
+[2026-01-15 03:42:18] WARN: Source IP: 198.51.XXX.XXX
+[2026-01-15 03:43:01] CRIT: Mass deletion initiated
+[2026-01-15 03:43:02] CRIT: database.sql — DROPPED
+[2026-01-15 03:43:03] CRIT: /var/www/html — DELETED
+[2026-01-15 03:43:05] CRIT: DNS records — PURGED
+[2026-01-15 03:43:06] FATAL: System unreachable
+[2026-01-15 03:43:07] --- CONNECTION LOST ---</div>
+        </article>
+
+        <article class="evidence-card fade-in">
+          <h3><i data-lucide="camera"></i> Captura de Error</h3>
+          <p>Estado de la web después del ataque. Todos los dominios mostraban esto.</p>
+          <div class="code-block" style="text-align: center; color: var(--accent);">
+╔══════════════════════════════════╗
+║                                  ║
+║    [!] ERROR 503                 ║
+║                                  ║
+║    novatech.do                   ║
+║    DIGITAL PRESENCE NOT FOUND    ║
+║                                  ║
+║    This domain has been          ║
+║    permanently removed.          ║
+║                                  ║
+╚══════════════════════════════════╝</div>
+        </article>
+
+        <article class="evidence-card fade-in">
+          <h3><i data-lucide="hard-drive"></i> Análisis del USB</h3>
+          <p>Análisis forense del dispositivo encontrado en la oficina.</p>
+          <div class="code-block">Brand: Unknown (no serial number)
+Capacity: 2GB
+Files: 1 (message.txt)
+Hash MD5: a3f2b8c1d4e5f6a7b8c9d0e1
+Metadata: Wiped clean
+Fingerprints: None found
+Origin: UNDETERMINED
+Status: Under custody</div>
+        </article>
+
+        <article class="evidence-card fade-in">
+          <h3><i data-lucide="lock"></i> Reporte de Seguridad</h3>
+          <p>Resumen del análisis post-incidente realizado por el equipo forense.</p>
+          <div class="code-block">═══ INCIDENT SUMMARY ═══
+Vector: Control panel access
+Method: Compromised credentials
+Scope: Full infrastructure
+Data leaked: NONE (confirmed)
+Offline backup: INTACT ✓
+Recovery time: 45 days
+Measures deployed: 23
+Current status: SECURED ✓</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT FORM + MAP ===== -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="fade-in">
+        <span class="section-label">// comunícate</span>
+        <h2 class="section-title">Hablemos de tu proyecto</h2>
+        <p class="section-desc">
+          Completa el formulario o visítanos en nuestra nueva oficina.
+          Estamos listos para construir algo indestructible contigo.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Form -->
+        <div class="fade-in">
+          <form onsubmit="validateContactForm(event)">
+            <div class="form-group">
+              <label for="contact-name">Nombre completo *</label>
+              <input type="text" id="contact-name" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Correo electrónico *</label>
+              <input type="email" id="contact-email" placeholder="tu@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-service">Servicio de interés</label>
+              <select id="contact-service">
+                <option value="">Seleccionar servicio...</option>
+                <option value="web">Diseño Web Blindado</option>
+                <option value="app">Apps Móviles</option>
+                <option value="security">Ciberseguridad Proactiva</option>
+                <option value="marketing">Marketing Digital con IA</option>
+                <option value="branding">Branding &amp; Identidad</option>
+                <option value="cloud">Cloud &amp; Infraestructura</option>
+                <option value="chatbot">Automatización &amp; Chatbots</option>
+                <option value="ecommerce">E-Commerce Seguro</option>
+                <option value="training">Capacitación Digital</option>
+                <option value="other">Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Mensaje *</label>
+              <textarea id="contact-message" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+              Enviar mensaje →
+            </button>
+          </form>
+        </div>
+
+        <!-- Info + Map -->
+        <div class="fade-in">
+          <div style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--sp-lg); margin-bottom: var(--sp-lg);">
+            <h3 style="font-family: var(--font-display); font-size: 0.85rem; margin-bottom: var(--sp-md);"><i data-lucide="map-pin"></i> Ubicación</h3>
+            <p style="color: var(--text-secondary); font-size: 0.88rem;">
+              <strong>Torre Empresarial, Piso 8</strong><br>
+              Av. Abraham Lincoln #102<br>
+              Piantini, Santo Domingo<br>
+              República Dominicana
+            </p>
+          </div>
+
+          <div style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--sp-lg); margin-bottom: var(--sp-lg);">
+            <h3 style="font-family: var(--font-display); font-size: 0.85rem; margin-bottom: var(--sp-md);"><i data-lucide="phone"></i> Contacto Directo</h3>
+            <p style="color: var(--text-secondary); font-size: 0.88rem;">
+              <strong>Email:</strong> <a href="mailto:info@novatech.do">info@novatech.do</a><br>
+              <strong>Teléfono:</strong> +1 (809) 555-NOVA<br>
+              <strong>WhatsApp:</strong> +1 (809) 555-6682<br>
+              <strong>Horario:</strong> Lun-Vie 8AM — 6PM
+            </p>
+          </div>
+
+          <!-- Map (Google Maps) -->
+          <div class="map-container">
+            <iframe
+              src="https://maps.google.com/maps?q=Av.+Abraham+Lincoln+102,+Piantini,+Santo+Domingo,+República+Dominicana&z=16&output=embed"
+              loading="lazy"
+              title="Ubicación de NovaTech en Santo Domingo"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <p style="font-size: 0.68rem; color: var(--text-muted); margin-top: var(--sp-sm); text-align: right;">
+            <a href="https://maps.google.com/maps?q=Av.+Abraham+Lincoln+102,+Piantini,+Santo+Domingo" target="_blank" rel="noopener">
+              Ver mapa más grande →
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SYSTEM STATUS ===== -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="section-inner fade-in" style="text-align: center; max-width: 680px; margin: 0 auto;">
+      <span class="section-label">// system status</span>
+      <h2 class="section-title">Estado Actual del Sistema</h2>
+      <p class="section-desc" style="margin-left: auto; margin-right: auto;">
+        Transparencia total. Nuestros sistemas son monitoreados en tiempo real
+        y compartimos su estado como parte de nuestro compromiso.
+      </p>
+      <div class="usb-message" style="text-align: left; max-width: 480px; margin: 2rem auto 0;">
+        <p>
+          &gt; SYSTEM STATUS: OPERATIONAL ✓<br>
+          &gt; LAST AUDIT: 2 hours ago<br>
+          &gt; THREATS DETECTED: 0<br>
+          &gt; BACKUPS: Up to date<br>
+          &gt; ENCRYPTION: AES-256 active<br>
+          &gt; MONITORING: 24/7 online<br>
+          &gt; UPTIME: 99.97%<br>
+          &gt; MSG: "Never again." [END]
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">NOVATECH</div>
+        <p>Fuimos borrados. Nos reinventamos. Volvimos mejores.<br>Agencia digital dominicana, reconstruida.</p>
+      </div>
+      <div>
+        <h4>NAVEGACIÓN</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>CONTACTO</h4>
+        <ul>
+          <li><a href="mailto:info@novatech.do">info@novatech.do</a></li>
+          <li><a href="tel:+18095556682">+1 (809) 555-NOVA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>REDES</h4>
+        <ul>
+          <li><a href="#"><i data-lucide="instagram"></i> Instagram</a></li>
+          <li><a href="#"><i data-lucide="linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://github.com/FelixDls10/Reto-Pyme" target="_blank" rel="noopener"><i data-lucide="github"></i> GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 NovaTech. Todos los derechos reservados.</span>
+      <span>Hecho con <i data-lucide="zap"></i> en Santo Domingo</span>
+    </div>
+  </footer>
+
+  <!-- ===== CHATBOT ===== -->
+  <button class="chatbot-trigger" id="chatbot-trigger" aria-label="Abrir NOVA Assistant"><i data-lucide="message-circle"></i></button>
+  <div class="chatbot-window" id="chatbot-window">
+    <div class="chatbot-header">
+      <div>
+        <h4>NOVA Assistant</h4>
+        <div class="status">En línea</div>
+      </div>
+      <button class="chatbot-close" id="chatbot-close" aria-label="Cerrar">&times;</button>
+    </div>
+    <div class="chatbot-messages" id="chatbot-messages"></div>
+    <div class="chatbot-input-area">
+      <input type="text" id="chatbot-input" placeholder="Escribe tu pregunta..." autocomplete="off">
+      <button id="chatbot-send" aria-label="Enviar"><i data-lucide="send"></i></button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
